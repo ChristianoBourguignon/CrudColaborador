@@ -10,6 +10,7 @@ mydb = mysql.connector.connect(
 
 cursor = mydb.cursor()
 cursor.execute("""
+    CREATE DATABASE IF NOT EXISTS escola;
     CREATE TABLE IF NOT EXISTS NewColaborador (
         idUsuario INT AUTO_INCREMENT PRIMARY KEY,
         matricula INT NOT NULL UNIQUE,
